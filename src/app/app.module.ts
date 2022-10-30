@@ -3,16 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TheHeaderComponent } from './the-header/the-header.component';
+import { NewTaskComponent } from './new-task/new-task.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TheHeaderComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, TheHeaderComponent, NewTaskComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

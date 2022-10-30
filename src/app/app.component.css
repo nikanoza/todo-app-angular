@@ -11,6 +11,11 @@
   overflow-x: hidden;
 }
 
+.main.dark{
+  background-color: #171823;
+  background-image: url(../assets/bg-mobile-dark.jpg);
+}
+
 @media (min-width: 768px) {
   .main {
     display: flex;
@@ -19,5 +24,8 @@
     background-image: url(../assets/bg-desktop-light.jpg);
     padding-top: 70px;
     background-size: 100% 300px;
+  }
+  .main.dark {
+    background-image: url(../assets/bg-desktop-dark.jpg);
   }
 }

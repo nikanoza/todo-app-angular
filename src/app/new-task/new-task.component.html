@@ -1,0 +1,30 @@
+<div class="card" [class.dark]="darkMode">
+  <span
+    id="new-task-status"
+    class="checkbox"
+    [class.active]="!active"
+    (click)="changeStatus()"
+  >
+    <svg
+      *ngIf="!active"
+      xmlns="http://www.w3.org/2000/svg"
+      width="11"
+      height="9"
+    >
+      <path
+        fill="none"
+        stroke="#FFF"
+        stroke-width="2"
+        d="M1 4.304L3.696 7l6-6"
+      />
+    </svg>
+  </span>
+  <input
+    id="task-input"
+    type="text"
+    placeholder="Create a new todo…"
+    [class.dark]="darkMode"
+    [(ngModel)]="text"
+    (keydown)="addTask($event)"
+  />
+</div>

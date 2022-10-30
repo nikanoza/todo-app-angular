@@ -1,0 +1,56 @@
+.card {
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 14px 20px;
+  display: flex;
+  column-gap: 12px;
+}
+.card.dark {
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  background-color: #25273d;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 50%;
+  background: transparent;
+}
+.checkbox.active {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  border: none;
+}
+input {
+  width: 275px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  letter-spacing: -0.17px;
+  color: #9495a5;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+input.dark {
+  color: #767992;
+}
+@media (min-width: 768px) {
+  .card {
+    width: 540px;
+    height: 64px;
+    align-items: center;
+  }
+  input {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

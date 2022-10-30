@@ -1,4 +1,11 @@
 <div class="main" [class.dark]="darkMode">
   <the-header [changeModeHandler]="changeMode"></the-header>
-  <new-task [darkMode]="darkMode" [tasks]="tasks" (newTaskEvent)="addNewTask($event)"></new-task>
+  <new-task
+    [darkMode]="darkMode"
+    [tasks]="tasks"
+    (newTaskEvent)="addNewTask($event)"
+  ></new-task>
+  <ul class="task-list">
+    <task-detail [tasks]="tasks"></task-detail>
+  </ul>
 </div>

@@ -1,0 +1,52 @@
+.task-item {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px 20px 20px;
+  border-bottom: 1px solid #e3e4f1;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 50%;
+  background: transparent;
+}
+.checkbox.active {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  border: none;
+}
+.text {
+  width: 240px;
+  margin-right: 12px;
+  margin-left: 12px;
+  text-decoration: "none";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text.active {
+  text-decoration: line-through;
+}
+.delete {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.task-item.dark {
+  border-bottom: 1px solid #393a4b;
+}
+@media (min-width: 768px) {
+  .task-item {
+    height: 64px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

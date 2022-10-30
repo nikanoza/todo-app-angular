@@ -1,0 +1,14 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+svg {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  header {
+    max-width: 540px;
+  }
+}

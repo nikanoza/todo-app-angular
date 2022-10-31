@@ -12,5 +12,61 @@
       (changeStatusEvent)="changeStatus($event)"
       (removeTaskEvent)="removeTask($event)"
     ></task-detail>
+    <div class="controls">
+      <span>{{ tasks.length }} items left</span>
+      <div class="buttonsDesktop">
+        <div class="panel" [class.dark]="darkMode">
+          <button
+            class="control-btn"
+            [class.active]="filterBy === 'All'"
+            (click)="changeFilter('All')"
+          >
+            All
+          </button>
+          <button
+            class="control-btn"
+            [class.active]="filterBy === 'active'"
+            (click)="changeFilter('active')"
+          >
+            Active
+          </button>
+          <button
+            class="control-btn"
+            [class.active]="filterBy === 'completed'"
+            (click)="changeFilter('completed')"
+          >
+            Completed
+          </button>
+        </div>
+      </div>
+      <button id="clear" class="clear control-btn" (click)="deleteCompleted()">
+        Clear Completed
+      </button>
+    </div>
   </ul>
+  <div class="buttonsMobile">
+      <div class="panel" [class.dark]="darkMode">
+        <button
+          class="control-btn"
+          [class.active]="filterBy === 'All'"
+          (click)="changeFilter('All')"
+        >
+          All
+        </button>
+        <button
+          class="control-btn"
+          [class.active]="filterBy === 'active'"
+          (click)="changeFilter('active')"
+        >
+          Active
+        </button>
+        <button
+          class="control-btn"
+          [class.active]="filterBy === 'completed'"
+          (click)="changeFilter('completed')"
+        >
+          Completed
+        </button>
+    </div>
+  </div>
 </div>

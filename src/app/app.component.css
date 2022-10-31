@@ -11,7 +11,7 @@
   overflow-x: hidden;
 }
 
-.main.dark{
+.main.dark {
   background-color: #171823;
   background-image: url(../assets/bg-mobile-dark.jpg);
 }
@@ -33,6 +33,52 @@
   background-color: #25273d;
 }
 
+.controls {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 20px 20px;
+  color: #9495a5;
+}
+.controls.dark {
+  color: #5b5e7e;
+}
+
+.buttonsDesktop {
+  display: none;
+}
+
+.panel {
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.panel.dark {
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  background-color: #25273d;
+}
+
+.control-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #9495a5;
+}
+
+.control-btn.active {
+  color: #3a7cfd;
+}
 
 @media (min-width: 768px) {
   .main {
@@ -50,5 +96,22 @@
   .task-list {
     max-width: 540px;
     margin-top: 24px;
+  }
+
+  .buttonsDesktop {
+    display: block;
+  }
+
+  .controls {
+    height: 64px;
+  }
+
+  .panel {
+    max-width: 166px;
+    margin-top: 0;
+  }
+
+  .buttonsMobile {
+    display: none;
   }
 }

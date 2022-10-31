@@ -7,10 +7,21 @@ import { Task } from './task.model';
 export class TasksService {
   tasks: Task[] = [];
   darkMode: boolean = false;
+  filterBy: string = 'All';
+
+  getTasks() {
+    const actives = this.tasks.filter((task) => task.active);
+    const completed = this.tasks.filter((task) => !task.active);
+    return this.filterBy === 'active'
+      ? actives
+      : this.filterBy === 'completed'
+      ? completed
+      : this.tasks;
+  }
 
   addTask(task: Task) {
     this.tasks.push(task);
-    return this.tasks;
+    return this.getTasks();
   }
 
   changeMode() {
@@ -22,8 +33,7 @@ export class TasksService {
     const taskClone = this.tasks.slice();
     const taskIndex = this.tasks.findIndex((task) => task.id === id);
     taskClone[taskIndex].active = !taskClone[taskIndex].active;
-    this.tasks = taskClone;
-    return this.tasks;
+    return this.getTasks();
   }
 
   deleteTask(id: number) {
@@ -31,6 +41,20 @@ export class TasksService {
     const taskIndex = this.tasks.findIndex((task) => task.id === id);
     taskClone.splice(taskIndex, 1);
     this.tasks = taskClone;
-    return this.tasks;
+    console.log(this.getTasks());
+    return this.getTasks();
+  }
+
+  changeFilter(filter: string) {
+    this.filterBy = filter;
+    console.log(this.getTasks());
+    return this.getTasks();
+  }
+
+  removeCompleted() {
+    const tasksClone = this.tasks.slice();
+    const result = tasksClone.filter((task) => task.active);
+    this.tasks = result;
+    return this.getTasks();
   }
 }

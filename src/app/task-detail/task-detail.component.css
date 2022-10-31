@@ -31,8 +31,17 @@
   text-overflow: ellipsis;
 }
 .text.active {
+  color: #D1D2DA;
   text-decoration: line-through;
 }
+
+.text.dark.active{
+  color: #494c6b;
+}
+.text.dark{
+  color: #C8CBE7;
+}
+
 .delete {
   margin-left: auto;
   cursor: pointer;

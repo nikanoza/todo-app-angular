@@ -5,7 +5,11 @@
     [tasks]="tasks"
     (newTaskEvent)="addNewTask($event)"
   ></new-task>
-  <ul class="task-list">
-    <task-detail [tasks]="tasks"></task-detail>
+  <ul class="task-list" [class.dark]="darkMode">
+    <task-detail
+      [tasks]="tasks"
+      [darkMode]="darkMode"
+      (changeStatusEvent)="changeStatus($event)"
+    ></task-detail>
   </ul>
 </div>

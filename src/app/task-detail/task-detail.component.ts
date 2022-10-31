@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from '../task.model';
 
 @Component({
@@ -8,8 +8,14 @@ import { Task } from '../task.model';
 })
 export class TaskDetailComponent implements OnInit {
   @Input() tasks: Task[];
+  @Input() darkMode: boolean;
+  @Output() changeStatusEvent = new EventEmitter<number>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  changeStatus(id: number) {
+    this.changeStatusEvent.emit(id);
+  }
 }

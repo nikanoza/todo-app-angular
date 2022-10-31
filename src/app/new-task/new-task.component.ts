@@ -24,7 +24,7 @@ export class NewTaskComponent implements OnInit {
 
   addTask(event: KeyboardEvent): void {
     const newTask = {
-      id: this.tasks.length > 0 ? this.tasks[this.tasks.length - 1].id : 1,
+      id: this.tasks.length > 0 ? this.tasks[this.tasks.length - 1].id + 1 : 1,
       text: this.text,
       active: this.active,
     };

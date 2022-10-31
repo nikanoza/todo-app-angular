@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.darkMode = this.tasksService.darkMode;
+    this.tasks = this.tasksService.tasks;
   }
 
   changeMode = (): void => {
@@ -22,5 +23,9 @@ export class AppComponent implements OnInit {
 
   addNewTask(task: Task) {
     this.tasks = this.tasksService.addTask(task);
+  }
+
+  changeStatus(id: number) {
+    this.tasks = this.tasksService.changeStatus(id);
   }
 }

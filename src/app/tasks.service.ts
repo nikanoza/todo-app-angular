@@ -17,4 +17,12 @@ export class TasksService {
     this.darkMode = !this.darkMode;
     return this.darkMode;
   }
+
+  changeStatus(id: number) {
+    const taskClone = this.tasks.slice();
+    const taskIndex = this.tasks.findIndex((task) => task.id === id);
+    taskClone[taskIndex].active = !taskClone[taskIndex].active;
+    this.tasks = taskClone;
+    return this.tasks;
+  }
 }

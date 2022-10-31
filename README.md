@@ -1,27 +1,67 @@
-# TodoApp
+<img src="readme/angular.png" width="25" style="top: 8px" />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+# ToDo app
 
-## Development server
+### Table of Contents
+* [Prerequisites](#Prerequisites)
+* [Tech Stack](#Tech-Stack)
+* [Getting Started](#Getting-Started)
+* [Project Structure](#Project-Structure)
+* [Deployment](#Deployment)
+* [Resources](#Resources)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#
+### Prerequisites
 
-## Code scaffolding
+* <img src="readme/nodejs.png" width="25" style="top: 8px" /> *Node JS @16.X and up*
+* <img src="readme/npm.png" width="25" style="top: 8px" /> *npm @8 and up*
+* <img src="readme/typescript.png" width="25" style="top: 8px" /> *Typescript @4 and up*
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#
+### Tech Stack
 
-## Build
+* <img src="readme/angular.png" width="25" style="top: 8px" /> *Angular @14.2.0 - front-end framework*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#
+### Getting Started
+1. First of all you need to clone app repository from github:
+```
+git clone https://github.com/nikanoza/todo-app-angular.git
+```
+2. Next step requires install all the dependencies.
 
-## Running unit tests
+```
+npm install
+```
+3. You can run project
+```
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#
+### Project Structure
 
-## Running end-to-end tests
+```
+|--- src
+|   |--- assets # project images
+|   |--- app # project main folder
+|        |--- new-task # component folder
+|        |--- task-detail # component folder
+|        |--- the-header # component folder
+|        |--- app.module.ts # main module file
+|        |--- task.model.ts # interface types file
+|        |--- tasks.service.ts # service file
+- package.json     # dependency manager configurations
+```
+#
+### Deployment
+Before every deployment you need to create build file.
+```
+npm run build
+```
+after this you can use this file to deploy project on server.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#
+### Resources
+* [figma](https://www.figma.com/file/4oLHA5cl4VWGxgg4Ev0aP1/todo-app?node-id=0%3A1).
+* [challenge](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)

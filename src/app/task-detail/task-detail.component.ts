@@ -10,6 +10,7 @@ export class TaskDetailComponent implements OnInit {
   @Input() tasks: Task[];
   @Input() darkMode: boolean;
   @Output() changeStatusEvent = new EventEmitter<number>();
+  @Output() removeTaskEvent = new EventEmitter<number>();
 
   constructor() {}
 
@@ -17,5 +18,9 @@ export class TaskDetailComponent implements OnInit {
 
   changeStatus(id: number) {
     this.changeStatusEvent.emit(id);
+  }
+
+  removeTask(id: number) {
+    this.removeTaskEvent.emit(id);
   }
 }

@@ -28,4 +28,8 @@ export class AppComponent implements OnInit {
   changeStatus(id: number) {
     this.tasks = this.tasksService.changeStatus(id);
   }
+
+  removeTask(id: number) {
+    this.tasks = this.tasksService.deleteTask(id);
+  }
 }

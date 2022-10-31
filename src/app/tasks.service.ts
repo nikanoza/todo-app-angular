@@ -25,4 +25,12 @@ export class TasksService {
     this.tasks = taskClone;
     return this.tasks;
   }
+
+  deleteTask(id: number) {
+    const taskClone = this.tasks.slice();
+    const taskIndex = this.tasks.findIndex((task) => task.id === id);
+    taskClone.splice(taskIndex, 1);
+    this.tasks = taskClone;
+    return this.tasks;
+  }
 }
